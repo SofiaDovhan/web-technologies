@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 4: Анкета</title>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Анкета студента</h2>
+        
+        <form action="" method="get" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Облікові дані</legend>
+                
+                <div class="field">
+                    <label for="username">Ім'я користувача (ПІБ):</label>
+                    <input type="text" id="username" name="username" placeholder="Введіть ПІБ" required tabindex="1">
+                </div>
+
+                <div class="field">
+                    <label for="pwd">Пароль (6 симв., велика, мала літера, цифра):</label>
+                    <input type="password" id="pwd" name="user_password" 
+                           pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}" 
+                           title="Рівно 6 символів, щонайменше одна цифра, одна велика та одна мала літера" 
+                           placeholder="Aa1234" required tabindex="2">
+                </div>
+
+                <div class="field">
+                    <label for="mail">Email:</label>
+                    <input type="email" id="mail" name="user_email" 
+                           autocomplete="off" 
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                           placeholder="example@mail.com" required tabindex="3">
+                </div>
+
+                <div class="field">
+                    <label for="phone">Номер телефону (+380...):</label>
+                    <input type="tel" id="phone" name="user_phone" 
+                           pattern="^\+380\d{9}$" 
+                           placeholder="+380991234567" required tabindex="4">
+                </div>
+
+                <div class="field">
+                    <label for="birth">Дата народження:</label>
+                    <input type="date" id="birth" name="birth_date" tabindex="5">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Опитування</legend>
+
+                <div class="field radio-group">
+                    <label>Курс навчання:</label><br>
+                    <input type="radio" id="c1" name="course" value="1" tabindex="6">
+                    <label for="c1">1 курс</label>
+                    <input type="radio" id="c2" name="course" value="2" tabindex="7">
+                    <label for="c2">2 курс</label>
+                    <input type="radio" id="c3" name="course" value="3" tabindex="8">
+                    <label for="c3">3 курс</label>
+                </div>
+
+                <div class="field radio-group">
+                    <label>Форма фінансування:</label><br>
+                    <input type="radio" id="f1" name="funding" value="budget" tabindex="9">
+                    <label for="f1">Бюджет</label>
+                    <input type="radio" id="f2" name="funding" value="contract" checked tabindex="10">
+                    <label for="f2">Контракт (активно за замовчуванням)</label>
+                    <input type="radio" id="f3" name="funding" value="grant" tabindex="11">
+                    <label for="f3">Грант</label>
+                </div>
+
+                <div class="field check-group">
+                    <label>Інтереси в IT (оберіть одне або кілька):</label><br>
+                    <input type="checkbox" id="i1" name="interests" value="frontend" tabindex="12">
+                    <label for="i1">Front-End</label>
+                    <input type="checkbox" id="i2" name="interests" value="backend" tabindex="13">
+                    <label for="i2">Back-End</label>
+                    <input type="checkbox" id="i3" name="interests" value="qa" tabindex="14">
+                    <label for="i3">QA Manual/Auto</label>
+                    <input type="checkbox" id="i4" name="interests" value="devops" tabindex="15">
+                    <label for="i4">DevOps</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Списки вибору</legend>
+
+                <!-- 1. 5 значень, 3-тє за замовчуванням -->
+                <div class="field">
+                    <label for="fav-lang">Улюблена мова (3-тя за замовчуванням):</label>
+                    <select id="fav-lang" name="primary_lang" tabindex="16">
+                        <option value="csharp">C#</option>
+                        <option value="python">Python</option>
+                        <option value="js" selected>JavaScript</option>
+                        <option value="cpp">C++</option>
+                        <option value="java">Java</option>
+                    </select>
+                </div>
+
+                <!-- 2. 6 значень з множинним вибором -->
+                <div class="field">
+                    <label for="skills">Фреймворки (множинний вибір, 6 значень):</label>
+                    <select id="skills" name="frameworks" multiple size="4" tabindex="17">
+                        <option value="react">React</option>
+                        <option value="vue">Vue</option>
+                        <option value="angular">Angular</option>
+                        <option value="django">Django</option>
+                        <option value="laravel">Laravel</option>
+                        <option value="aspnet">ASP.NET</option>
+                    </select>
+                </div>
+
+                <!-- 3. optgroup: 4 групи по 3 пункти -->
+                <div class="field">
+                    <label for="os-choice">Операційна система (optgroup):</label>
+                    <select id="os-choice" name="os" tabindex="18">
+                        <optgroup label="Windows">
+                            <option value="win10">Windows 10</option>
+                            <option value="win11">Windows 11</option>
+                            <option value="winserver">Windows Server</option>
+                        </optgroup>
+                        <optgroup label="Linux">
+                            <option value="ubuntu">Ubuntu</option>
+                            <option value="debian">Debian</option>
+                            <option value="fedora">Fedora</option>
+                        </optgroup>
+                        <optgroup label="macOS">
+                            <option value="ventura">macOS Ventura</option>
+                            <option value="sonoma">macOS Sonoma</option>
+                            <option value="sequoia">macOS Sequoia</option>
+                        </optgroup>
+                        <optgroup label="Mobile OS">
+                            <option value="android">Android</option>
+                            <option value="ios">iOS</option>
+                            <option value="harmony">HarmonyOS</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- 4. datalist: підказки -->
+                <div class="field">
+                    <label for="city-input">Місто (із підказками через datalist):</label>
+                    <input list="cities" id="city-input" name="city" placeholder="Почніть вводити місто..." tabindex="19">
+                    <datalist id="cities">
+                        <option value="Київ">
+                        <option value="Львів">
+                        <option value="Чернівці">
+                        <option value="Харків">
+                        <option value="Одеса">
+                        <option value="Дніпро">
+                    </datalist>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Додатково</legend>
+                
+                <div class="field">
+                    <label for="bio">Про себе:</label>
+                    <textarea id="bio" name="user_bio" rows="4" placeholder="Розкажіть декілька слів про себе..." tabindex="20"></textarea>
+                </div>
+
+                <!-- Тільки аудіофайли, більше ніж 1 -->
+                <div class="field">
+                    <label for="audio-files">Завантажити аудіофайли (accept="audio/*", multiple):</label>
+                    <input type="file" id="audio-files" name="audio_tracks[]" accept="audio/*" multiple tabindex="21">
+                </div>
+            </fieldset>
+
+            <div class="actions">
+                <input type="reset" value="Очистити форму" tabindex="23">
+                <input type="submit" value="Надіслати анкету" tabindex="22">
+            </div>
+        </form>
+
+        <a href="../index.html" class="back-link">Повернутись на головну</a>
+    </div>
+
+</body>
+</html>
