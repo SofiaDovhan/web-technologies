@@ -1,0 +1,13 @@
+# Залежності
+node_modules/
+npm-debug.log*
+
+# Системні файли
+.DS_Store
+Thumbs.db
+
+# Логи та тимчасові файли
+*.log
+.env
+dist/
+build/
