@@ -13,30 +13,30 @@ div {
     text-align: justify;
 }
 
-.red-text {
+.text-colorred {
     color: red;
 }
 
-.no-wrap {
+.text-nowrap {
     white-space: nowrap;
 }
 
-#special-paragraph {
+#paragraph {
     font-style: italic;
     font-weight: bold;
 }
 
-.shadow-text {
-    text-shadow: 5px -5px 3px rgba(255, 0, 0, 0.3); /* світло-червона тінь за зразком */
+.text-shadow {
+    text-shadow: 5px -5px 3px rgba(255, 0, 0, 0.3);
 }
 
-.strike-upper-indent {
+.text-crossed {
     text-decoration: line-through;
     text-transform: uppercase;
     text-indent: 50px;
 }
 
-.spaced-text {
+.text-uppercase {
     letter-spacing: 30px;
     word-spacing: 50px;
 }

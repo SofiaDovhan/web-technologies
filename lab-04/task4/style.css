@@ -39,7 +39,7 @@ div > p.text-background {
     line-height: 45px;
 }
 
-img + p {
+img + p + span span {
     background-color: brown;
     color: black;
 }
