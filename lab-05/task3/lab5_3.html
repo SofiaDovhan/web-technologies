@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3 — Анкета</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <h1>Анкета студента</h1>
+
+        <fieldset>
+            <legend>Особисті дані</legend>
+            <label>Прізвище та ім'я:
+                <input type="text" name="name" placeholder="Іваненко Іван">
+            </label>
+            <label>Email:
+                <input type="email" name="email" placeholder="ivan@example.com">
+            </label>
+            <label>Дата народження:
+                <input type="date" name="birth">
+            </label>
+            <p>Стать:
+                <label><input type="radio" name="gender" value="m"> Чоловіча</label>
+                <label><input type="radio" name="gender" value="f"> Жіноча</label>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Навчання та інтереси</legend>
+            <label>Курс:
+                <select name="course">
+                    <option>1</option><option>2</option><option>3</option><option>4</option>
+                </select>
+            </label>
+            <p>Цікавить:
+                <label><input type="checkbox" name="i1"> Frontend</label>
+                <label><input type="checkbox" name="i2"> Backend</label>
+                <label><input type="checkbox" name="i3"> Дизайн</label>
+            </p>
+            <label>Коментар:
+                <textarea name="comment" rows="4"></textarea>
+            </label>
+        </fieldset>
+
+        <button type="submit">Надіслати</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* ---------- Фон сторінки ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1b2a41;              /* запасний колір, поки вантажиться зображення */
+    background-image: url('img/bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;           /* фон нерухомий при прокручуванні */
+}
+
+/* ---------- Контейнер ---------- */
+.container {
+    box-sizing: border-box;
+    max-width: 900px;
+    min-width: 320px;
+    margin: 20px auto;                      /* auto — центрування по горизонталі */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Коли вікно браузера вужче за 320px, ширина контейнера більше не зменшується
+       (min-width: 320px): він залишається 320px, а в браузері з'являється
+       горизонтальна смуга прокрутки. */
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* ---------- Блок «Теги» (display) ---------- */
+.demo-inline div {
+    display: inline;
+    width: 200px;
+    height: 100px;
+    background-color: #bbdefb;
+    border: 1px solid #1b4f8a;
+    /* width і height НЕ діють на inline-елементи: рядковий елемент займає
+       рівно стільки місця, скільки потребує його вміст. */
+}
+
+.demo-block span {
+    display: block;
+    width: 150px;                           /* для block width діє — span стають стовпцем */
+    background-color: #c8e6c9;
+    border: 1px solid #2e7d32;
+    margin-bottom: 4px;
+}
+.demo-block { margin-top: 10px; }
+
+/* ---------- Блок «Повторення фону» (background-repeat) ---------- */
+.repeat {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #333;
+    font-weight: 700;
+    background-image: url('img/icon.svg');
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.repeat-x     { background-repeat: repeat-x; }
+.repeat-y     { background-repeat: repeat-y; }
+.repeat-space { background-repeat: space; }
+.repeat-round { background-repeat: round; }
+/* Різниця між space та round:
+   - space: зображення НЕ масштабується, повторюється цілу кількість разів,
+     а залишок простору рівномірно розподіляється ПРОМІЖКАМИ між картинками;
+   - round: проміжків немає, натомість зображення РОЗТЯГУЄТЬСЯ або стискається,
+     щоб у блоці помістилося ціле число копій. */
+
+/* ---------- Блок «Масштабування» (background-size) ---------- */
+.size {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    margin: 0 10px 10px 0;
+    border: 2px solid #333;
+    font-weight: 700;
+    background-image: url('img/photo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.size-contain { background-size: contain; } /* картинка повністю вміщується (можуть бути порожні поля) */
+.size-cover   { background-size: cover; }   /* картинка заповнює весь блок (краї обрізаються) */
+
+/* ---------- Блок «Прокручування фону» (background-attachment) ---------- */
+.attach {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: 300px;
+    max-height: 150px;
+    overflow: auto;
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    border: 1px solid #333;
+    background-image: url('img/photo.svg');
+    background-repeat: no-repeat;
+    background-size: 120px 120px;
+}
+.attach-scroll { background-attachment: scroll; }
+.attach-local  { background-attachment: local; }
+/* scroll: фон прикріплений до самого блоку (його видимої рамки) і НЕ рухається,
+   коли прокручується вміст усередині блоку — текст «пливе» поверх нерухомої картинки.
+   local: фон прикріплений до ВМІСТУ блоку, тому при прокручуванні тексту
+   разом із ним зміщується і картинка. */

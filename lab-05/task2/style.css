@@ -1,0 +1,47 @@
+/* Одна колірна гама (червоні відтінки від найсвітлішого до найтемнішого).
+   Селектори класів та ідентифікаторів не використовуються. */
+body {
+    font-family: "Times New Roman", serif;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 760px;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid white;
+    height: 60px;
+    width: 150px;
+}
+
+/* Шапка */
+thead th {
+    color: white;
+    font-size: 18px;
+    height: 80px;
+}
+thead th:nth-child(1) { background-color: #f2dcdb; font-size: 14px; }
+thead th:nth-child(2) { background-color: #e3b7b5; }
+thead th:nth-child(3) { background-color: #d69493; }
+thead th:nth-child(4) { background-color: #953a3a; }
+thead th:nth-child(5) { background-color: #642424; }
+
+/* Перший стовпець тіла таблиці */
+tbody th {
+    background-color: #bd5250;
+    color: white;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+/* Чергування рядків — працює і для нових рядків */
+tbody tr:nth-child(odd) td  { background-color: #e3b7b5; }
+tbody tr:nth-child(even) td { background-color: #f2dcdb; }
+
+td {
+    color: #4a2a2a;
+    font-size: 22px;
+}
