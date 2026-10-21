@@ -3,19 +3,20 @@
     margin: 0;
 }
 
-.trip {
+.plan-box {
     background-color: rgb(255, 165, 0);
     width: 500px;
     padding: 20px;
     color: white;
 }
 
-.trip__title {
+.plan-title {
     font-size: 25px;
     font-weight: 900;
     margin: 0 0 10px;
 }
 
+.plan-list,
 .list {
     list-style: none;
     margin: 0;
@@ -23,7 +24,7 @@
     background-repeat: no-repeat;
 }
 
-.list--level1 {
+.plan-list {
     background-color: rgb(103, 158, 128);
     padding-right: 20px;
     padding-left: 50px;
@@ -33,12 +34,12 @@
     background-size: 40px 40px;
 }
 
-.list--level2 {
+.list-level2 {
     margin: 0;
     padding: 0;
 }
 
-.list__item--level2 {
+.list-item-level2 {
     font-size: 18px;
     font-style: italic;
     background-color: rgb(153, 180, 102);
@@ -49,27 +50,30 @@
     background-size: 30px 30px;
 }
 
-.icon-route     { background-image: url('icons/ad_units.svg'); } 
-.icon-tickets   { background-image: url('icons/airplane_ticket.svg'); } 
-.icon-hotel     { background-image: url('icons/hotel.svg'); } 
-.icon-car       { background-image: url('icons/car_rental.svg'); } 
-.icon-bars      { background-image: url('icons/local_bar.svg'); } 
-.icon-casino    { background-image: url('icons/casino.svg'); } 
-.icon-museums   { background-image: url('icons/museum.svg'); } 
-.icon-festivals { background-image: url('icons/festival.svg'); } 
+.icon-route     { background-image: url('icons/ad_units.svg'); }
+.icon-tickets   { background-image: url('icons/airplane_ticket.svg'); }
+.icon-hotel     { background-image: url('icons/hotel.svg'); }
+.icon-car       { background-image: url('icons/car_rental.svg'); }
+.icon-bars      { background-image: url('icons/local_bar.svg'); }
+.icon-casino    { background-image: url('icons/casino.svg'); }
+.icon-museums   { background-image: url('icons/museum.svg'); }
+.icon-festivals { background-image: url('icons/festival.svg'); }
 
+/* Елемент span */
 .tag {
     padding: 10px 20px;
     display: inline-block;
 }
 
-.tag--level1 {
+/* span у списку 1-го рівня */
+.tag-level1 {
     font-size: 20px;
     font-weight: 700;
     background-color: rgb(199, 124, 106);
     margin-bottom: 10px;
 }
 
-.tag--level2 {
+/* span у списку 2-го рівня */
+.tag-level2 {
     background-color: rgb(218, 106, 32);
 }

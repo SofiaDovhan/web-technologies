@@ -3,7 +3,6 @@ body {
     margin: 20px;
 }
 
-/* Спільні стилі: 300px × 200px, зовнішній відступ 20px, внутрішній 15px */
 div {
     display: inline-block;
     box-sizing: border-box;
@@ -17,13 +16,11 @@ div {
     vertical-align: top;
 }
 
-/* Блок 1: діагональні смуги двох відтінків одного кольору */
 div:nth-of-type(1) {
     background: linear-gradient(45deg, #7fb8ec 50%, #4a90d9 50%);
     background-size: 40px 40px;
 }
 
-/* Блок 2: клітинки з двох лінійних градієнтів (один напівпрозорий) */
 div:nth-of-type(2) {
     background-color: #ffffff;
     background-image:
@@ -32,13 +29,11 @@ div:nth-of-type(2) {
     background-size: 40px 40px;
 }
 
-/* Блок 3: радіальний градієнт circle, точка 30px 20px, 3+ кольори з позиціями */
 div:nth-of-type(3) {
     background: radial-gradient(circle farthest-corner at 30px 20px,
         #ffffff 0%, #8ec5f5 40%, #1b6fc2 100%);
 }
 
-/* Блок 4: напівпрозорий градієнт поверх суцільного кольору */
 div:nth-of-type(4) {
     background-color: #33bbf1;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
