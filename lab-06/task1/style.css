@@ -1,0 +1,39 @@
+.container {
+    left: 0;
+    right: 0;
+    position: relative; 
+    height: 250px;
+    margin: 0 auto;
+}
+
+.box {
+    position: absolute; 
+    width: 250px;
+    height: 80px;
+    border: 2px solid #333;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    
+    text-align: center;
+}
+
+.box-bottom {
+    top: 100px;
+    left: -0px; 
+    background-color: #7493d1; 
+    z-index: 2; 
+}
+
+.box-middle {
+    top: 50px;
+    left: 200px;
+    background-color: #27ae60; 
+    z-index: 1; 
+}
+
+.box-top {
+    top: 0px;
+    left: 400px;
+    background-color: #87ceeb; 
+    z-index: 3;
+}
