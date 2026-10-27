@@ -1,0 +1,68 @@
+
+.container {
+    position: relative; 
+    height: 250px;
+    margin: 40px;
+}
+
+.hover-box {
+    position: absolute; 
+    border: 2px solid #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease; 
+}
+
+.hover-box:first-child {
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 40px;
+    line-height: 40px; 
+    background-color: #00b050; 
+    color: #000;
+    font-weight: bold;
+    z-index: 3;
+}
+.hover-box:nth-child(2) {
+    top: 55px; 
+    left: 0;
+    width: 150px;
+    height: 120px;
+    box-sizing: border-box;
+    padding-top: 30px;
+    line-height: 1.5;
+    background-color: #5b9bd5; 
+    color: #fff;
+    
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.hover-box:last-child {
+    top: 0;
+    left: 165px;
+    width: 250px;
+    height: 175px; 
+    line-height: 175px; 
+    background-color: #5c4776; 
+    color: #fff;
+    
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.hover-box:first-child:hover ~ .hover-box:nth-child(2),
+.hover-box:nth-child(2):hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hover-box:nth-child(2):hover ~ .hover-box:last-child,
+.hover-box:last-child:hover {
+    opacity: 1;
+    visibility: visible;
+}
