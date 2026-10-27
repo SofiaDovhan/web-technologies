@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navigation panels</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <ul class="vnav">
+        <li class="active"><a href="#"><span class="material-icons"></span>Home</a></li>
+        <li class="has-sub">
+            <a href="#"><span class="material-icons">About</span></a>
+            <ul>
+                <li><a href="#">Company</a></li>
+                <li class="has-sub">
+                    <a href="#">Team</a>
+                    <ul>
+                        <li><a href="#">Designers</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li class="has-sub">
+                            <a href="#">Managers</a>
+                            <ul>
+                                <li><a href="#">Project</a></li>
+                                <li><a href="#">Product</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">History</a></li>
+            </ul>
+        </li>
+        <li class="has-sub">
+            <a href="#"><span class="material-icons">Work</span></a>
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li class="has-sub">
+                    <a href="#">Portfolio</a>
+                    <ul>
+                        <li><a href="#">Web</a></li>
+                        <li><a href="#">Mobile</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#"><span class="material-icons">Contact</span></a></li>
+    </ul>
+</nav>
+
+<nav>
+    <ul class="hnav hnav--fixed">
+        <li class="active"><a href="#" title="Home"><span class="material-icons">home</span></a></li>
+        <li>
+            <a href="#" title="Search"><span class="material-icons">search</span></a>
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Images</a></li>
+                <li class="has-sub">
+                    <a href="#">More</a>
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Maps</a></li>
+                        <li><a href="#">Books</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="Mail"><span class="material-icons">mail</span></a>
+            <ul>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">Sent</a></li>
+                <li><a href="#">Drafts</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" title="Account"><span class="material-icons">Person</span></a>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Log out</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>
