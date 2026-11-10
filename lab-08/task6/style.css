@@ -1,0 +1,13 @@
+:root{--cols:12;--gap:4px;--block-bg:#ffd941;--block-color:#fff;--row:46px;--fs:1.8rem}
+body{font-family:"Times New Roman",serif}
+.tree{display:grid;grid-template-columns:repeat(var(--cols),1fr);grid-auto-rows:var(--row);gap:var(--gap);counter-reset:block;max-width:1100px;margin-inline:auto;padding:var(--gap)}
+.block{--span:1;grid-column:span var(--span);display:flex;align-items:center;justify-content:center;background:var(--block-bg);color:var(--block-color);font-size:var(--fs);counter-increment:block}
+.block::before{content:counter(block)}
+.block:nth-child(n+1):nth-child(-n+1){--span:12}
+.block:nth-child(n+2):nth-child(-n+3){--span:6}
+.block:nth-child(n+4):nth-child(-n+6){--span:4}
+.block:nth-child(n+7):nth-child(-n+10){--span:3}
+.block:nth-child(n+11):nth-child(-n+16){--span:2}
+.block:nth-child(n+17):nth-child(-n+28){--span:1}
+@media (max-width:768px){:root{--fs:1.3rem;--row:40px}.block:nth-child(n+17):nth-child(-n+28){--span:2}}
+@media (max-width:576px){:root{--fs:1rem;--row:34px;--gap:3px}.block:nth-child(n+11):nth-child(-n+16){--span:4}.block:nth-child(n+17):nth-child(-n+28){--span:3}}
